@@ -1,0 +1,7 @@
+MASTER SERVICES AGREEMENT (AMENDED)
+
+Vendor: Acme Supplies
+Contract Value: 100000
+Start Date: 2026-01-01
+End Date: 2027-06-30
+Status: Active

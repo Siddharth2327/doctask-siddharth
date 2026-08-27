@@ -1,0 +1,388 @@
+/* -------------------------------------------------------------- */
+/* App shell                                                        */
+/* -------------------------------------------------------------- */
+
+.shell {
+  display: grid;
+  grid-template-columns: var(--sidebar-width) 1fr;
+  min-height: 100vh;
+}
+
+.sidebar {
+  background: var(--paper-raised);
+  border-right: 1px solid var(--rule);
+  padding: 1.75rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.brand-mark {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.brand-sub {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--ink-soft);
+  font-size: 0.92rem;
+  padding: 0.5rem 0.6rem;
+  border-radius: var(--radius);
+  border-left: 2px solid transparent;
+}
+
+.nav-link:hover {
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.nav-link.active {
+  color: var(--ink);
+  border-left-color: var(--committed-navy);
+  background: var(--paper);
+  font-weight: 500;
+}
+
+.case-picker {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.case-picker label {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.main {
+  padding: 2.5rem 3rem;
+  max-width: 62rem;
+}
+
+.page-header {
+  margin-bottom: 2rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.page-header p {
+  color: var(--ink-soft);
+  margin: 0.35rem 0 0;
+  max-width: 40rem;
+}
+
+/* -------------------------------------------------------------- */
+/* Form controls                                                    */
+/* -------------------------------------------------------------- */
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  margin-bottom: 1rem;
+}
+
+.field label {
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+  font-weight: 500;
+}
+
+input[type="text"],
+input[type="file"],
+select {
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  padding: 0.5rem 0.65rem;
+  border: 1px solid var(--rule-strong);
+  border-radius: var(--radius);
+  background: var(--paper-raised);
+  color: var(--ink);
+}
+
+input[type="text"]:focus,
+select:focus {
+  border-color: var(--committed-navy);
+}
+
+.btn {
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  font-weight: 500;
+  padding: 0.55rem 1.1rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--ink);
+  background: var(--ink);
+  color: var(--paper-raised);
+  cursor: pointer;
+}
+
+.btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.btn:hover:not(:disabled) {
+  background: #3a362d;
+}
+
+.btn--ghost {
+  background: transparent;
+  color: var(--ink);
+}
+
+.btn--ghost:hover:not(:disabled) {
+  background: var(--paper);
+}
+
+.btn--approve {
+  border-color: var(--evidence-green);
+  background: var(--evidence-green);
+}
+
+.btn--approve:hover:not(:disabled) {
+  background: #264429;
+}
+
+.btn--reject {
+  border-color: var(--reject-rust);
+  background: var(--reject-rust);
+}
+
+.btn--reject:hover:not(:disabled) {
+  background: #7f2f1e;
+}
+
+.btn-row {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+/* -------------------------------------------------------------- */
+/* Cards / ledger rows                                              */
+/* -------------------------------------------------------------- */
+
+.card {
+  background: var(--paper-raised);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
+  padding: 1.25rem 1.4rem;
+}
+
+.card + .card {
+  margin-top: 0.9rem;
+}
+
+.doc-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.doc-row:last-child {
+  border-bottom: none;
+}
+.card > div:last-child > .doc-row {
+  border-bottom: none;
+}
+
+.doc-name {
+  font-weight: 500;
+}
+
+.doc-meta {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+}
+
+.finding-card {
+  border-left: 3px solid var(--rule-strong);
+}
+
+.finding-card[data-status="pending"] {
+  border-left-color: var(--caution-amber);
+}
+.finding-card[data-status="approved"] {
+  border-left-color: var(--evidence-green);
+}
+.finding-card[data-status="rejected"] {
+  border-left-color: var(--reject-rust);
+}
+.finding-card[data-status="committed"] {
+  border-left-color: var(--committed-navy);
+}
+
+.finding-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.finding-field {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.finding-value {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  margin: 0.15rem 0 0.5rem;
+}
+
+.finding-rationale {
+  color: var(--ink-soft);
+  font-size: 0.88rem;
+  margin: 0 0 0.75rem;
+}
+
+.evidence-quote {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  background: var(--paper);
+  border-left: 2px solid var(--rule-strong);
+  padding: 0.5rem 0.7rem;
+  margin: 0 0 0.75rem;
+  color: var(--ink-soft);
+}
+
+/* -------------------------------------------------------------- */
+/* Stamp                                                            */
+/* -------------------------------------------------------------- */
+
+.stamp {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  padding: 0.28rem 0.6rem;
+  border-radius: 2px;
+  border: 1.5px solid currentColor;
+  transform: rotate(-1.5deg);
+}
+
+.stamp--pending {
+  color: var(--caution-amber);
+  background: var(--caution-amber-bg);
+}
+.stamp--approved {
+  color: var(--evidence-green);
+  background: var(--evidence-green-bg);
+}
+.stamp--rejected {
+  color: var(--reject-rust);
+  background: var(--reject-rust-bg);
+}
+.stamp--committed {
+  color: var(--committed-navy);
+  background: var(--committed-navy-bg);
+}
+
+/* -------------------------------------------------------------- */
+/* Register table (report viewer)                                   */
+/* -------------------------------------------------------------- */
+
+.register {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.register th {
+  text-align: left;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  padding: 0.5rem 0.75rem;
+  border-bottom: 1px solid var(--rule-strong);
+}
+
+.register td {
+  padding: 0.65rem 0.75rem;
+  border-bottom: 1px solid var(--rule);
+  vertical-align: top;
+}
+
+.register tr:last-child td {
+  border-bottom: none;
+}
+
+.register .field-cell {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+  white-space: nowrap;
+}
+
+.register .value-cell {
+  font-family: var(--font-display);
+  font-size: 1rem;
+}
+
+/* -------------------------------------------------------------- */
+/* Misc                                                             */
+/* -------------------------------------------------------------- */
+
+.empty-state {
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+  padding: 2rem 0;
+  text-align: center;
+  border: 1px dashed var(--rule-strong);
+  border-radius: var(--radius);
+}
+
+.error-banner {
+  background: var(--reject-rust-bg);
+  color: var(--reject-rust);
+  border: 1px solid var(--reject-rust);
+  border-radius: var(--radius);
+  padding: 0.65rem 0.9rem;
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+}
+
+.usage-line {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--ink-soft);
+  margin-top: 0.5rem;
+}

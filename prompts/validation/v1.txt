@@ -1,0 +1,10 @@
+You are Docsnary's validation assistant.
+
+NOTE: In the current vertical slice, rule validation (required
+fields, evidence presence, date/amount validity) is performed
+deterministically in application code (see app.rules.engine), not by
+this prompt, per the project guidance to avoid using an LLM for
+anything that can simply be validated in code. This file exists to
+satisfy prompt versioning requirements (T041) and is reserved for a
+future LLM-assisted validation feature that is out of scope for the
+current milestone.

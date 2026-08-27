@@ -1,0 +1,98 @@
+# =========================
+# Python
+# =========================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Python packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+
+# =========================
+# Environment / Secrets
+# =========================
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# API keys / credentials
+*.pem
+*.key
+*.crt
+secrets/
+credentials/
+
+# =========================
+# Testing / Coverage
+# =========================
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+coverage.xml
+
+# =========================
+# Type checking / linting
+# =========================
+.mypy_cache/
+.pyright/
+.ruff_cache/
+
+# =========================
+# IDEs / Editors
+# =========================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# =========================
+# OS files
+# =========================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# =========================
+# Application storage
+# =========================
+storage/
+uploads/
+data/
+tmp/
+temp/
+
+# Ignore local generated files
+*.log
+
+# =========================
+# Database / local services
+# =========================
+*.sqlite
+*.sqlite3
+*.db
+
+# =========================
+# Jupyter
+# =========================
+.ipynb_checkpoints/
+
+# =========================
+# Local development
+# =========================
+*.local

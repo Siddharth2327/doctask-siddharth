@@ -1,0 +1,6 @@
+RENEWAL NOTICE
+
+Vendor: Acme Supplies
+Contract Value: 120000
+Renewal Date: 2027-01-01
+Status: Renewed
