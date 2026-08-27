@@ -1,0 +1,12 @@
+SUPPLIER SERVICES AGREEMENT
+
+Vendor: Orion Office Systems
+Contract Value: 85000
+Start Date: 2026-02-01
+End Date: 2026-11-30
+Status: Active
+
+Orion Office Systems will provide office equipment maintenance and supply services.
+The agreed contract value is 85000.
+The service term begins on 2026-02-01 and ends on 2026-11-30.
+The agreement status is Active.

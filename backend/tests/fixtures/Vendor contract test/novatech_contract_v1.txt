@@ -1,0 +1,14 @@
+MASTER SERVICES AGREEMENT
+
+Vendor: NovaTech Solutions
+Contract Value: 150000
+Start Date: 2026-01-01
+End Date: 2026-12-31
+Status: Active
+
+This Master Services Agreement is entered into between the customer and NovaTech Solutions
+for the provision of technology consulting and support services.
+
+The total contract value is 150000 for the initial contract term.
+The agreement starts on 2026-01-01 and ends on 2026-12-31.
+The contract is currently Active.
